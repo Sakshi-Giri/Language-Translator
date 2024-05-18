@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="static/css/services.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <title>Our Services</title>
+</head>
+<body>
+
+    <!-- Home Page Button -->
+    <a href="{{ url_for('homenew') }}"  class="home-button">Home Page</a>
+
+    <div class="container">
+        <h2>Our Services</h2>
+        <p class="description">We specialize in translating audio and video content with utmost accuracy and attention to detail. Our team uses advanced technology and linguistic expertise to ensure that your message is effectively conveyed to your target audience.</p>
+        <section class="services">
+            <div class="card youtube">
+                <div class="content">
+                    <div class="icon"><i class="fa fa-youtube"></i></div>
+                    <div class="title">Youtube Video Link</div>
+                    <p class="description">You can provide the link of Youtube video and the video will get transcribed into the desired language</p>
+                    <button class="btn"><a href="{{ url_for('youtube_to_audio_input') }}">Let's Go</a></button>
+                </div>
+            </div>
+            <div class="card video">
+                <div class="content">
+                    <div class="icon"><i class="fa fa-video-camera"></i></div>
+                    <div class="title">Video File</div>
+                    <p class="description">You can provide video file and it converts the video’s language into desired language.</p>
+                    <button class="btn"><a href="{{ url_for('video_to_audio_input') }}">Let's Go</a></button>
+                </div>
+            </div>
+            <div class="card audio">
+                <div class="content">
+                    <div class="icon"><i class="fa fa-music"></i></div>
+                    <div class="title">Audio File</div>
+                    <p class="description">You can provide audio file and it converts the audio’s language into desired language.</p>
+                    <button class="btn"><a href="{{ url_for('audio_to_text_input') }}">Let's Go</a></button>
+                </div>
+            </div>
+            <div class="card text">
+                <div class="content">
+                    <div class="icon"><i class="fa fa-file-text"></i></div>
+                    <div class="title">Text File</div>
+                    <p class="description">You can provide text file and it converts the text’s language into desired language.</p>
+                    <button class="btn"><a href="{{ url_for('home') }}">Let's Go</a></button>
+                </div>
+            </div>
+        </section>
+    </div>
+    
+</body>
+</html>

@@ -1,0 +1,127 @@
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    background-color: #e9effd;
+   /* background-repeat: no-repeat;
+    background-size: auto 100%;
+    background-image: url("https://murf.ai/resources/media/posts/97/concept-program-smartphone-translate-from-different-languages.jpg"); */
+    margin-left: 350px;
+    padding: 0;
+    display: flexbox;
+    justify-content: flex-end;
+    align-items: center;
+    min-height: 100vh;
+}
+
+.container {
+    width: 80%;
+    max-width: 600px;
+    text-align: center;
+    border: 1px solid #ccc;
+    padding: 30px;
+    border-radius: 15px;
+    background-color:#D6EAF8 ;
+    animation: fadeIn 0.5s ease-in-out;
+    margin-right: 300px;
+    margin-top: 100px;
+    margin-bottom: 100px;
+}
+
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+    }
+    to {
+        opacity: 1;
+    }
+}
+
+.box-button {
+    background-color: #000000;
+    color: #ffffff;
+    border: none;
+    padding: 12px 24px;
+    border-radius: 8px;
+    cursor: pointer;
+    margin-bottom: 30px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    transition: background-color 0.3s ease;
+}
+
+.box-button:hover {
+    background-color: #424442;
+}
+
+.language-select {
+    margin-bottom: 30px;
+}
+
+.language-select select {
+    margin-top: 20px;
+}
+
+.output {
+    margin-top: 30px;
+    text-align: left;
+    border: 1px solid #ccc;
+    padding: 20px;
+    border-radius: 8px;
+    min-height: 200px;
+    overflow-y: auto; 
+    background-color: #f9f9f9;
+    position: relative;
+}
+
+.output-icons {
+    margin-top: 30px;
+    display: flex;
+    justify-content: center;
+}
+
+.output-icons i {
+    font-size: 36px;
+    cursor: pointer;
+    margin: 0 30px;
+    color: #000;
+    transition: color 0.3s ease;
+}
+
+.output-icons i:hover {
+    color: #333;
+}
+
+.download-container {
+    position: absolute;
+    top: 15px;
+    right: 15px;
+}
+
+.download-icon {
+    font-size: 30px;
+    color: #000;
+    cursor: pointer;
+    transition: color 0.3s ease;
+}
+
+.download-icon:hover {
+    color: #464242;
+}
+
+h2 {
+    color: #000;
+}
+
+label {
+    color: #333;
+    font-weight: bold;
+}
+
+select {
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 8px;
+    outline: none;
+}
+
+.spacer {
+    height: 50px;
+}

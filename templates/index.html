@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="en">
+<head> 
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Text Transcriber</title>
+    <link rel="stylesheet" href="static/css/styles copy.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
+</head>
+<body style='background-image: url("https://murf.ai/resources/media/posts/97/concept-program-smartphone-translate-from-different-languages.jpg");
+width:100%'>    <!-- Home Page Button -->
+<!--   <a href="{{ url_for('homenew') }}"  class="home-button">Home Page</a> -->
+
+    <div class="container">
+        <div class="sidebar">
+            <a href="{{ url_for('hometrial') }}"> <button class="sidebar-btn" >Home</button></a>
+
+            <a href="{{ url_for('home') }}"> <button class="sidebar-btn" >Text File</button></a>
+            <a href="{{ url_for('audio_to_text_input') }}"> <button class="sidebar-btn" >Audio File</button></a>
+            <a href="{{ url_for('video_to_audio_input') }}"><button class="sidebar-btn">Vedio File</button></a>
+            <a href="{{ url_for('youtube_to_audio_input') }}"><button class="sidebar-btn">Youtube Link</button></a>
+
+            <a href="{{ url_for('logout') }}"><button class="sidebar-btn" >Logout</button></a>
+
+        </div>
+        <h2>Text Transcriber</h2>
+        <form action="/translate" method="post" enctype="multipart/form-data">
+            <input type="file" id="fileInput" name="fileInput" style="display: none;">
+            <button type="button" class="box-button" id="fileInputBtn">Choose File</button><br>
+            <textarea id="text" name="text" rows="4" cols="50" placeholder="Paste your text here..."></textarea><br>
+            <div class="language-select">
+                <label for="language">Choose Language:</label><br>
+                <select id="language" name="language">
+                    <option value="en">English</option>
+                    <option value="fr">French</option>
+                    <option value="es">Spanish</option>
+                    <option value="hi">Hindi</option>
+                    <option value="mr">Marathi</option>
+
+                    <option value="ta">tamil</option>
+                    <option value="te">telugu</option>
+                    <option value="tr">turkish</option>
+                    <option value="pa">punjabi</option>
+                    <option value="ne">nepali</option>
+
+                    <option value="af">afrikaans</option>
+                    <option value="bn">bengali</option>
+                    <option value="zh-tw">chinese (traditional)</option>
+                    <option value="de">german</option>
+                    <option value="gu">gujarati</option>
+
+                    <option value="it">italian</option>
+                    <option value="ja">japanese</option>
+                    <option value="kn">kannada</option>
+                    <option value="ko">korean</option>
+                    <option value="ml">malayalam</option>
+                </select>
+            </div>
+            <div class="output-icons">
+                
+                <button type="submit" style="width:20%;font-size: 20px;">Submit</button>
+            </div>
+            <div class="output" id="output">
+                <!-- <div class="download-container">
+                    <a href="#" id="downloadLink" download="translated_text.txt">
+                        <i class="fas fa-download download-icon"></i>
+                    </a>
+                </div> -->
+                {% if translated_text %}
+                <div class="translated-text">
+                    <h3>Translated Text:</h3>
+                    <p>{{ translated_text }}</p>
+                </div>
+                {% endif %}
+            </div>
+        </form>
+    </div>
+
+    <div class="spacer"></div>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+    <script >$(document).ready(function() {
+        $("#fileInputBtn").click(function() {
+            $("#fileInput").click();
+        });
+    
+        $("#fileInput").change(function() {
+            var file = this.files[0];
+            var reader = new FileReader();
+            reader.onload = function(event) {
+                var text = event.target.result;
+                $("#text").val(text);
+            };
+            reader.readAsText(file);
+        });
+    
+        // Rest of your JavaScript code...
+    });</script>
+</body>
+</html>

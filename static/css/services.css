@@ -1,0 +1,146 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,400;0,500;1,300&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Poppins', sans-serif;
+}
+
+body {
+    margin: 0;
+    padding: 0;
+    background-image: url('https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSqM58ZmB-6WxCeCFqwhgobTRfrq6_hJKZu05ODP0MDg7I6Ayns3x6PbJ_ksGGRfENhp4s&usqp=CAU');
+    background-size: cover;
+    background-position: center;
+}
+
+.container {
+    height: 100%;
+    padding-top: 30px;
+    width: 90%;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.container h2 {
+    text-align: center;
+    text-transform: uppercase;
+    font-size: 2.5rem;
+    margin-bottom: 20px;
+    color: #fff;
+}
+
+.description {
+    text-align: center;
+    font-size: 22px;
+    font-family: Arial, Helvetica, sans-serif;
+    margin-bottom: 50px;
+    color: #fff;
+    animation: fadeInUp 1s ease;
+}
+
+.services {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 30px;
+}
+
+.card {
+    text-align: center;
+    background: #fff;
+    padding: 40px 30px;
+    border-radius: 10px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease;
+}
+
+.content .icon i {
+    padding: 20px;
+    font-size: 50px;
+}
+
+.card:hover {
+    transform: translateY(-5px);
+    background-color: rgb(73, 238, 210);
+}
+
+.card:hover .icon i {
+    color: #fff;
+}
+
+.youtube .icon i {
+    color: #13cad3;
+}
+
+.video .icon i {
+    color: #13cad3;
+}
+
+.audio .icon i {
+    color: #13cad3;
+}
+
+.text .icon i {
+    color: #13cad3;
+}
+
+.card:hover .btn {
+    background-color: #fff;
+}
+
+.card .btn {
+    background-color: #13cad3;
+    border: none;
+    padding: 10px 20px;
+    font-family: Arial, Helvetica, sans-serif;
+    font-weight: bold;
+    font-size: 17px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.card .btn {
+    display: block;
+    margin-top: 20px;
+}
+
+.content .title {
+    font-size: 24px;
+    font-weight: 600;
+    color: #222;
+    margin-bottom: 15px;
+}
+
+.content p {
+    color: #080808;
+    font-size: 19px;
+    font-family: Arial, Helvetica, sans-serif;
+    line-height: 1.6;
+}
+
+.card:hover .content p {
+    color: #fff;
+}
+
+.home-button {
+    position: fixed;
+    top: 20px;
+    left: 20px;
+    background-color: transparent;
+    color: #fff;
+    padding: 10px 20px;
+    border: 2px solid #fff;
+    border-radius: 5px;
+    text-decoration: none;
+    font-family: Arial, Helvetica, sans-serif;
+    font-weight: bold;
+    font-size: 16px;
+    z-index: 999; /* Ensure it appears above other content */
+    transition: background-color 0.3s, color 0.3s;
+}
+
+.home-button:hover {
+    background-color: #fff;
+    color: #000;
+}

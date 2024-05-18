@@ -1,0 +1,37 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ai Language translator website</title>
+    <link rel="stylesheet" href="static/css/home trial.css">
+</head>
+<body style='background-image: url("static/images/home trial.jpg");'>
+    <header>
+        <nav>
+            <div class="logo">
+                <img src="static/images/log trial.png">
+                Transpire
+            </div>
+            <div class="menu">
+              <a href="{{ url_for('homenew') }}">Home</a>
+              <a href="{{ url_for('about') }}" >About Us</a>
+              <a href="{{ url_for('services') }}" >Our Services</a>
+                <a href="{{ url_for('contact') }}">Contact</a>
+                <a href="{{ url_for('logout') }}">Logout</a>
+
+            </div>
+            
+        </nav>
+        <section  class="h-text">
+            <h1 style="margin-left: 600px;">Translate Anytime Anywhere</h1>
+            <!-- <span>"Let AI Translation be Your Universal Compass"</span> -->
+            <br>
+            <a href="#" style="margin-left: 700px;">Get Started</a>
+        </section>
+    </header>
+</body>
+</html>
+
